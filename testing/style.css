@@ -1,0 +1,301 @@
+@import url('https://fonts.googleapis.com/css2?family=Caprasimo&family=Monoton&family=Roboto&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(to top, red, aqua);
+    border-radius: 20px;
+}
+
+body {
+    height: auto;
+    width: auto;
+    background: black;
+    user-select: none;
+}
+
+.container {
+    background: black;
+    border-left: 2px solid rgb(95, 93, 93);
+    border-right: 2px solid rgb(95, 93, 93);
+    height: auto;
+    width: min(85%, 1000px);
+    margin: auto;
+    overflow-x: hidden;
+    overflow-y: auto;
+
+}
+
+.container::-webkit-scrollbar {
+    width: 8px;
+}
+
+@media screen and (max-width: 1000px) {
+    .container {
+        width: 100%;
+    }
+}
+
+.main {
+    border: 2px solid rgb(48, 48, 48);
+    border-bottom-right-radius: 40px;
+    border-bottom-left-radius: 40px;
+    width: 96%;
+    margin: auto;
+    margin-top: 0;
+    border-top: 0;
+}
+
+.ai-container {
+    border: 2px solid rgb(24, 24, 24);
+    width: min(95%, 1000px);
+    margin: auto;
+    margin-top: 40px;
+    border-radius: 40px;
+    box-shadow: 1px 1px 15px rgb(23, 22, 22);
+}
+
+.ai-container img {
+    width: 100%;
+    border-radius: 40.1px;
+    filter: saturate(4);
+    animation: heu-rotate 10s linear infinite;
+}
+
+
+.notes {
+    color: white;
+    font-family: Caprasimo;
+    text-align: center;
+    margin-top: 60px;
+    text-transform: uppercase;
+}
+
+.notes h2 {
+    font-size: 50px;
+    font-family: 'Monoton';
+    font-weight: bolder;
+    transform: scaleY(1.5);
+    background: linear-gradient(to right, aqua 50%, red 50%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+
+.notes h1 sup {
+    text-transform: lowercase;
+    font-size: 20px;
+
+}
+
+@keyframes heu-rotate {
+    0% {
+        filter: hue-rotate(0);
+    }
+
+    100% {
+        filter: hue-rotate(360deg)
+    }
+}
+
+.notes h1 {
+    font-size: 100px;
+    margin-top: 20px;
+    color: transparent;
+    font-family: 'Monoton';
+    background: linear-gradient(to right, red 50%, aqua 50%);
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+
+.notes h4 {
+    font-family: 'Monoton';
+    font-weight: lighter;
+    margin-top: -40px;
+    word-spacing: 4px;
+}
+
+.notes span {
+    color: rgb(255, 128, 0);
+}
+.manuals {
+    width: 96%;
+    margin: auto;
+    margin-top: 20px;
+    border: 2px solid rgb(58, 58, 58);
+    border-radius: 40px;
+    padding-top: 10px;
+    overflow: hidden;
+}
+
+.box {
+    height: 200px;
+    border: 2px solid rgb(46, 46, 46);
+    margin-bottom: 10px;
+    width: 99%;
+    border-radius: 40px;
+    margin-inline: auto;
+    transition: height 1s;
+    overflow: hidden;
+}
+
+.box:hover {
+    height: 600px;
+}
+
+@media screen and (max-width: 760px) {
+    .box .img-container .name {
+        display: none;
+    }
+
+}
+
+.box .img-container {
+    height: 200px;
+    width: 100%;
+    border: 1px solid rgb(49, 49, 49);
+    border-radius: 40px;
+    border-top: 0;
+    margin-inline: auto;
+    overflow: hidden;
+    display: flex;
+    flex-direction:row;
+}
+
+.box .img-container .name {
+    width: 50%;
+    height: 190px;
+    border: 2px solid transparent;
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px;
+    margin-top: 40px;
+}
+.box .img-container .image {
+    width: 50%;
+    height: 195px;
+    border: 2px solid aqua;
+    border-right: 0;
+    border-top-left-radius: 40px;
+    border-bottom-left-radius: 40px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+@media screen and (max-width: 760px) {
+    .box .img-container .image {
+        width: 100%;
+        background-size: cover;
+        border: 2px solid aqua;
+        border: 40px;
+    }
+}
+.img-container .chatgpt_name {
+    color: white;
+    text-align: center;
+    font-family: 'Roboto';
+}
+
+.img-container .chatgpt_image {
+    background: url(/gpt.jpg);
+    
+}
+.box .chatgpt_article {
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(/chat-gpt-header.jpeg);
+    background-position: center;
+    background-size: cover;
+}
+.img-container .bard_name {
+    color: white;
+    text-align: center;
+    font-family: 'Roboto';
+}
+.img-container .bard_image {
+    background: url(/bard.png);
+    
+}
+.box .bard_article {
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(/gbard.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.img-container .bing_name {
+    color: white;
+    text-align: center;
+    font-family: 'Roboto';
+}
+.img-container .bing_image {
+    background: url(/bing.jpg);
+    
+}
+
+.box .bing_article {
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(/microsoft.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.img-container .chatsonic_image {
+    background: url(/chatsonic.png);
+    
+}
+.img-container .chatsonic_name {
+    color: white;
+    text-align: center;
+    font-family: 'Roboto';
+}
+
+.box .chatsonic_article {
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(/chatsonic-header.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.img-container .you_name {
+    color: white;
+    text-align: center;
+    font-family: 'Roboto';
+}
+.img-container .you_image {
+    background: url(/you.jpg);
+    
+}
+
+.box .you_article {
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(/you-header.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.box .hr {
+    width: 70%;
+    height: 1.5px;
+    margin: auto;
+    background: rgb(31, 29, 29);
+    margin-top: 10px;
+}
+
+.box .article {
+    width: 100%;
+    height: 360px;
+    border: 2px solid rgb(31, 29, 29);
+    margin-top: 20px;
+    border-radius: 40px;
+}
+
+.box .article p {
+    margin-inline: auto;
+    width: min(80%, 800px);
+    color: white;
+    font-family: 'Roboto';
+    font-weight: lighter;
+    font-size: 20px;
+    padding: 10px;
+    margin-top: 40px;
+}
